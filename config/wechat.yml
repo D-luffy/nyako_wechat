@@ -1,0 +1,20 @@
+default: &default
+  appid: "8c8ee933cc94e131b7ea62ffcd2c4bb30e3a40bbd96c838717bb5d932a13b88a"
+  secret: "18960ee5d8e865c40616a26567ad586133eda58c00494e85e4f672e1b23de1d3"
+  token:  "cf842cc44531c6b112466b6fdb94020dc8bcba006edf2ca9b7aa24cd852825fc"
+  access_token: "/var/tmp/wechat_access_token"
+
+# production: 
+#   appid: <%= ENV['WECHAT_APPID'] %>
+#   secret: <%= ENV['WECHAT_APP_SECRET'] %>
+#   token:   <%= ENV['WECHAT_TOKEN'] %>
+#   access_token:  <%= ENV['WECHAT_ACCESS_TOKEN'] %>
+
+staging: 
+  <<: *default
+
+development: 
+  <<: *default
+
+test: 
+  <<: *default
