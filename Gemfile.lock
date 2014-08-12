@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/binarylogic/settingslogic.git
+  revision: 0ae134bc6b93463bb0bc406e5b0df82ed07fc53f
+  specs:
+    settingslogic (2.0.9)
+
+GIT
   remote: https://github.com/skinnyworm/wechat-rails
   revision: b7acbc05aa5caec68278339c21f15a56406fe427
   specs:
@@ -136,6 +142,7 @@ DEPENDENCIES
   mobile-fu (= 1.1.0)
   rails (= 3.2.14)
   sass-rails (~> 3.2.3)
+  settingslogic!
   sqlite3
   uglifier (>= 1.0.3)
   wechat-rails!
