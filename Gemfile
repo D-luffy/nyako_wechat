@@ -26,6 +26,7 @@ gem 'jquery-rails'
 
 gem "wechat-rails", git:"https://github.com/skinnyworm/wechat-rails"
 gem 'settingslogic', :git => 'https://github.com/binarylogic/settingslogic.git'
+gem 'puma'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
