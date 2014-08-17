@@ -1,6 +1,6 @@
 #encoding: UTF-8
 class WechatsController < ApplicationController
-  wechat_responder
+  wechat_responder appid: Settings.appid, secret: Settings.secret, token: Settings.token, access_token: Settings.access_token
 
   # 默认的文字信息responder
   on :text do |request, content|
