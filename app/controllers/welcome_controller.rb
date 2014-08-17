@@ -1,6 +1,7 @@
 #encoding: UTF-8
 require 'digest/sha1'
 class WelcomeController < ApplicationController
+	wechat_responder appid: Settings.appid, secret: Settings.secret, token: Settings.token, access_token: Settings.access_token
 	def index
 	end
 

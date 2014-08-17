@@ -2,6 +2,19 @@
 class WechatsController < ApplicationController
   wechat_responder appid: Settings.appid, secret: Settings.secret, token: Settings.token, access_token: Settings.access_token
 
+  def show
+    token = Settings.token
+    timestamp = params[:timestamp]
+    nonce = params[:nonce]
+    join = [token,timestamp,nonce].sort().join("")
+    tmp_str = Digest::SHA1.hexdigest(join)
+    echostr = "hello"
+    echostr = params[:echostr] if tmp_str == params[:signature]
+    respond_to do |format|
+      format.json { render json: echostr}
+    end
+  end
+
   # 默认的文字信息responder
   on :text do |request, content|
     request.reply.text "echo: #{content}" #Just echo
