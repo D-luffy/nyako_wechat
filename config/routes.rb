@@ -1,7 +1,6 @@
 Nyako::Application.routes.draw do
   root :to => 'welcome#index'
-  get "welcome/check_signature" => 'welcome#check_signature'
-
+  resource :weixin, only:[:show, :create]
   resource :wechat, only:[:show, :create]
   # The priority is based upon order of creation:
   # first created -> highest priority.
